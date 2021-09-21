@@ -1,7 +1,6 @@
 'use strict';
 
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
-const { addInRepoTestsToHost } = require('ember-add-in-repo-tests');
 
 module.exports = function (defaults) {
   let app = new EmberApp(defaults, {
@@ -12,12 +11,6 @@ module.exports = function (defaults) {
           { enabled: true },
         ],
       ],
-    },
-    trees: {
-      tests: addInRepoTestsToHost(
-        defaults.project,
-        (addon) => addon.includeTestsInHost
-      ),
     },
   });
 
