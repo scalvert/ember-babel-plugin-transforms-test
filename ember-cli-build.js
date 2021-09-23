@@ -14,10 +14,10 @@ module.exports = function (defaults) {
       ],
     },
     trees: {
-      tests: addInRepoTestsToHost(
-        defaults.project,
-        (addon) => addon.includeTestsInHost
-      ),
+      tests: addInRepoTestsToHost({
+        project: defaults.project,
+        shouldIncludeTestsInHost: (addon) => addon.includeTestsInHost,
+      }),
     },
   });
 
